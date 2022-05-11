@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: test-pod-reader
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: test
+roleRef:
+  kind: ClusterRole
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
